@@ -5,6 +5,7 @@
 
 Quadrangle::Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D)
 {
+    if ((A + B + C + D) != 360) throw clone_domain_error("Ошибка создания фигуры. Причина: сумма углов не равна 360");
     name = "Четырёхугольник";
     this->a = a;
     this->b = b;
@@ -14,14 +15,10 @@ Quadrangle::Quadrangle(int a, int b, int c, int d, int A, int B, int C, int D)
     this->B = B;
     this->C = C;
     this->D = D;
+    
 };
 
 void Quadrangle :: print_info()
     {
-
-    if ((A + B + C+ D) != 360) throw clone_domain_error("Ошибка создания фигуры. Причина: сумма углов не равна 360");
-
     std::cout << name << " (стороны " << a << ", " << b << ", " << c << ", " << d << "; углы " << A << ", " << B << ", " << C << ", " << D << ") создан" << std::endl;
-
-       
     };

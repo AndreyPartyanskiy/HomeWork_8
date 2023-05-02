@@ -7,6 +7,5 @@ class Square : public Rhombus
 public:
 
     Square(int a);
-    void print_info() override;
 };
 
